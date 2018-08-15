@@ -16,7 +16,7 @@
 #  MA 02110-1301, USA.
 
 # Nocturneon's User Friendly GUI Fork Bomb
-# Now even your grandma can bring your system to a crawl!
+# Now even your grandma can bring your system to its knees!
 
 # Import what we need to make our forks and GUI
 import os
@@ -35,11 +35,11 @@ def userExperience():
 master = Tk()
 
 # Big font for big helpfulness
-bigBoi = font.Font(family='Comic Sans MS', size=72, weight='bold')
+bigBoi = font.Font(family='Comic Sans MS', size=50, weight='bold')
 
 # Calculate coordinates and center window so that the button to fork your system up is right in your face; very user friendly!
-w = 570
-h = 280
+w = 550
+h = 240
 
 ws = master.winfo_screenwidth()
 hs = master.winfo_screenheight()
@@ -53,10 +53,7 @@ master.geometry('%dx%d+%d+%d' % (w, h, x, y))
 master.wm_title("Nocturneon's User Friendly Fork Bomb")
 
 # Big button so you know exactly where to click
-b = Button(master, font=bigBoi, text="Fork My \n System Up", command=userExperience)
-b.grid(row=1)
+b = Button(master, font=bigBoi, text="Click to fork\nyour system up", command=userExperience)
+b.place(relx=.5, rely=.5, anchor="c")
 
 mainloop()
-
-# Automatically focus on our creation
-ip.focus_set()
